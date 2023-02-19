@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.news-block {
+  border: 2px solid rgb(200, 200, 200);
+  margin: 20px;
+}
+
+.news-block  .tabs {
+  display: flex;
+  background: rgb(234, 234, 234);
+  border-bottom: 2px solid rgb(200, 200, 200);
+}
+
+.news-block .tabs button {
+  border: none;
+  outline: none;
+  padding: 20px 20px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: .4s;
+}
+
+.news-block .tabs button.active {
+  background-color: rgb(190, 190, 190);
+}
+
+.news-block .texts {
+  padding: 40px 20px;
+}
+
+.news-block .texts p {
+  margin-top: 20px;
+}

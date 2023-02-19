@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #091921;
+}
+
+.clock-NY, .clock-Tokyo, .clock-London, .clock-Moskow, .clock-Berlin, .clock-HK{
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(clock.png);
+  background-size: cover;
+  border: 4px solid #091921;
+  border-radius: 50%;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, .05),
+              inset 0 -15px 15px rgba(255, 255, 255, .05),
+              0 15px 15px rgba(0, 0, 0, .3),
+              inset 0 15px 15px rgba(0, 0, 0, .3);
+  margin-right: 50px;
+}
+
+.clock-NY::before, .clock-Tokyo::before, .clock-London::before, .clock-Moskow::before, .clock-Berlin::before, .clock-HK::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 1000;
+}
+
+.clock-NY p, .clock-Tokyo p, .clock-London p, .clock-Moskow p, .clock-Berlin p, .clock-HK p {
+  position: relative;
+  bottom: -80%;
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.clock-NY .hour, .clock-Tokyo .hour, .clock-London .hour, .clock-Moskow .hour, .clock-Berlin .hour, .clock-HK .hour, .clock-NY .min, .clock-Tokyo .min, .clock-London .min, .clock-Moskow .min, .clock-Berlin .min, .clock-HK .min, .clock-NY .sec, .clock-Tokyo .sec, .clock-London .sec, .clock-Moskow .sec, .clock-Berlin .sec, .clock-HK .sec {
+  position: absolute;
+}
+
+.clock-NY .min, .clock-Tokyo .min, .clock-London .min, .clock-Moskow .min, .clock-Berlin .min, .clock-HK .min, .mn {
+  width: 190px;
+  height: 130px;
+}
+
+.clock-NY .sec, .clock-Tokyo .sec, .clock-London .sec, .clock-Moskow .sec, .clock-Berlin .sec, .clock-HK .sec, .sc {
+  width: 10px;
+  height: 180px;
+}
+
+.NYhr, .Thr, .Lhr, .Mhr, .Bhr, .HKhr, .mn, .sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.NYhr, .Thr, .Lhr, .Mhr, .Bhr, .HKhr {
+  display: flex;
+  align-items: end;
+}
+
+.NYhr::before, .Thr::before, .Lhr::before, .Mhr::before, .Bhr::before, .HKhr::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 50px;
+  background: #ff105e;
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+
+.mn::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 60px;
+  background: #fff;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+
+.sc::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  background: #fff;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
